@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useLocalStorage } from "react"
 import store from "../store"
 import axios from 'axios'
 import myAxios from "../myAxios"
@@ -49,7 +49,7 @@ export default function OneCalendar(){
     
   }
 
-  var [is_full_day,set_is_full_day]=useState(false)
+  var [is_full_day,set_is_full_day]=useLocalStorage(false)
 
   return <div css={``}>
     {/* <a onClick={()=>store.navigate('my-calendars')}>חזרה</a> */}
